@@ -31,15 +31,12 @@ cv2.namedWindow('Result', cv2.WINDOW_NORMAL)
 cv2.resizeWindow('Result', 300, 300)  # Задайте нужные размеры
 
 # Путь к обрабатываемому видеофайлу
-video_path = 'D:/Work/Polygraph/lie/'  # Укажите путь к папке
+video_path = 'Putin.mp4'  # Укажите путь к папке
 
 
 ###----------------------------------------------------------------------------
-
-files = os.listdir(video_path)
-
+# files = os.listdir(video_path)
 name_without_ext = os.path.splitext(os.path.basename(video_path))[0]
-
 
 
 
@@ -85,4 +82,4 @@ while cap.isOpened():
 cap.release()
 cv2.destroyAllWindows()
 
-np.savetxt(f"./tr_csv/{name_without_ext}.csv", coord_vectors, delimiter=",")
+# np.savetxt(f"./tr_csv/{name_without_ext}.csv", coord_vectors, delimiter=",")
